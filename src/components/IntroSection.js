@@ -10,12 +10,12 @@ const IntroSection = () => (
     className="h-screen px-6 md:px-20 flex flex-col justify-center items-center text-black dark:text-white transition-colors duration-500"
   >
     <div className="flex flex-col items-center text-center gap-4">
-      
-      {/* Profile Image */}
+
+      {/* Profile Image (updated sizes) */}
       <img
         src={ProfilePic}
         alt="Mohamed Shaifudeen"
-        className="w-40 h-40 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-64 lg:h-64 rounded-full border-4 border-black dark:border-white shadow-lg object-cover"
+        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-black dark:border-white shadow-lg object-cover"
       />
 
       {/* Intro Text */}
