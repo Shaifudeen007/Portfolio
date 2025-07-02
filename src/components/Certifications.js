@@ -27,7 +27,7 @@ const certifications = [
     title: "Foundations of CyberSecurity",
     provider: "Google",
     link: "https://freecodecamp.org/example",
-    image: "public/certificates/Cyber.png.png",
+    image: "public/certificates/CYber.png.png",
     description: "",
   },
   {
