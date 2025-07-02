@@ -6,7 +6,7 @@ const certifications = [
     title: "Python For MachineLearning",
     provider: "Great Learning",
     link: "https://coursera.org/example",
-    image: "public/certificates/PythonML.png.png",
+    image: "/certificates/PythonMl.png.png",
     description: "",
   },
   {
