@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProfilePic from '../assets/pr.jpg';
-import ScrambledText from './ScrambledText'; // ✅ Ensure this file exists in the same directory
+
 
 const AboutMe = () => (
   <section
