@@ -6,7 +6,7 @@ const certifications = [
     title: "Python For MachineLearning",
     provider: "Great Learning",
     link: "https://coursera.org/example",
-    image: "/certificates/PythonML.png.png",
+    image: "public/certificates/PythonML.png.png",
     description: "",
   },
   {
@@ -27,7 +27,7 @@ const certifications = [
     title: "Foundations of CyberSecurity",
     provider: "Google",
     link: "https://freecodecamp.org/example",
-    image: "/certificates/Cyber.png.png",
+    image: "public/certificates/Cyber.png.png",
     description: "",
   },
   {
