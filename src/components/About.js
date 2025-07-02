@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ProfilePic from '../assets/pr.jpg';
 
-
 const AboutMe = () => (
   <section
     id="about"
@@ -33,18 +32,15 @@ const AboutMe = () => (
           About Me
         </motion.h3>
 
-        {/* 🌀 Scrambled Text Effect */}
-        <ScrambledText className="text-base sm:text-1rem leading-relaxed text-black dark:text-white/90">
-          I’m a final-year Computer Science Engineering student at E.G.S. Pillay Engineering College, passionate about Java development, artificial intelligence, cybersecurity, and problem solving.
-
-          I enjoy building scalable, full-stack applications using technologies like React, Java, and Tailwind CSS, always aiming for clean design and seamless user experience. Currently, I’m working on an AI-Driven Automated Penetration Testing Framework, combining intelligent automation with system security to enhance cybersecurity testing.
-
-          I’m also experienced in cloud-based projects, including a mobile detection system built using Python and YOLOv8, which highlights my interest in AI and real-world applications.
-
-          What drives me most is problem solving. I actively sharpen my skills on platforms like HackerRank and Skillrack, where I enjoy tackling algorithmic challenges that enhance my coding logic and analytical thinking.
-
-          I’m a dedicated and curious learner, always exploring new technologies and striving to build efficient, secure, and user-friendly solutions. I'm actively seeking internship or full-time opportunities in software development where I can grow, contribute, and make a meaningful impact.
-        </ScrambledText>
+        <motion.p
+          className="text-base sm:text-[1rem] leading-relaxed text-black dark:text-white/90"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          I’m a final-year Computer Science Engineering student at E.G.S. Pillay Engineering College, passionate about Java development, artificial intelligence, cybersecurity, and problem solving. I enjoy building scalable, full-stack applications using technologies like React, Java, and Tailwind CSS, always aiming for clean design and seamless user experience. Currently, I’m working on an AI-Driven Automated Penetration Testing Framework, combining intelligent automation with system security to enhance cybersecurity testing. I’m also experienced in cloud-based projects, including a mobile detection system built using Python and YOLOv8, which highlights my interest in AI and real-world applications. What drives me most is problem solving. I actively sharpen my skills on platforms like HackerRank and Skillrack, where I enjoy tackling algorithmic challenges that enhance my coding logic and analytical thinking. I’m a dedicated and curious learner, always exploring new technologies and striving to build efficient, secure, and user-friendly solutions. I'm actively seeking internship or full-time opportunities in software development where I can grow, contribute, and make a meaningful impact.
+        </motion.p>
       </div>
     </div>
   </section>
