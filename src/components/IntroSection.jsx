@@ -19,7 +19,7 @@ const IntroSection = () => (
       />
 
       {/* Intro Text */}
-      <p className="text-sm sm:text-base md:text-lg">Hi, I’m</p>
+      <p className="text-sm sm:text-base md:text-lg">Hi, I'm</p>
 
       {/* Responsive Animated Name */}
       <div className="text-lg sm:text-xl md:text-3xl font-semibold">

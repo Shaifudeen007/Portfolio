@@ -1,4 +1,4 @@
-// src/components/Particlesbackground.js
+// src/components/Particlesbackground.jsx
 
 import React from 'react';
 import Particles from 'react-tsparticles';
