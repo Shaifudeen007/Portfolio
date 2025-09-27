@@ -137,43 +137,92 @@ const Skills = () => (
   <StyledWrapper>
     <section
       id="skills"
-      className="min-h-screen px-6 pt-24 pb-12 md:px-20 bg-white dark:bg-transparent text-black dark:text-white transition-colors duration-500 flex flex-col items-center justify-start"
+      className="min-h-screen px-6 pt-24 pb-12 md:px-20 bg-white dark:bg-transparent text-black dark:text-white transition-colors duration-500 flex flex-col items-center justify-start relative overflow-hidden"
     >
       <motion.h2
-        className="text-3xl font-bold mb-8 text-center"
+        className="text-3xl font-bold mb-8 text-center animate-text-shimmer"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
         Skills
       </motion.h2>
 
-      <div className="flex flex-col md:grid md:grid-cols-3 gap-8 w-full max-w-6xl">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-8 w-full max-w-6xl relative z-10">
         {/* Frontend Section */}
-        <div className="text-center">
-          <h3 className="text-xl font-semibold mb-4">Frontend</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+        <motion.div 
+          className="text-center hover-lift p-6 rounded-xl bg-white/30 dark:bg-black/20 backdrop-blur-sm glow-border"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-xl font-semibold mb-4 animate-text-shimmer">Frontend</h3>
+          <div className="flex flex-wrap justify-center gap-4 card-hover">
             {renderSkills(frontendSkills)}
           </div>
-        </div>
+        </motion.div>
 
         {/* Backend Section */}
-        <div className="text-center">
-          <h3 className="text-xl font-semibold mb-4">Backend</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+        <motion.div 
+          className="text-center hover-lift p-6 rounded-xl bg-white/30 dark:bg-black/20 backdrop-blur-sm glow-border"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-xl font-semibold mb-4 animate-text-shimmer">Backend</h3>
+          <div className="flex flex-wrap justify-center gap-4 card-hover">
             {renderSkills(backendSkills, Object.keys(frontendSkills).length * 0.1)}
           </div>
-        </div>
+        </motion.div>
 
         {/* Other Section */}
-        <div className="text-center">
-          <h3 className="text-xl font-semibold mb-4">Others</h3>
-          <div className="flex flex-wrap justify-center gap-4">
+        <motion.div 
+          className="text-center hover-lift p-6 rounded-xl bg-white/30 dark:bg-black/20 backdrop-blur-sm glow-border"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-xl font-semibold mb-4 animate-text-shimmer">Others</h3>
+          <div className="flex flex-wrap justify-center gap-4 card-hover">
             {renderSkills(otherSkills, (Object.keys(frontendSkills).length + Object.keys(backendSkills).length) * 0.1)}
           </div>
-        </div>
+        </motion.div>
       </div>
+
+      {/* Floating Skill Icons */}
+      <motion.div
+        className="absolute top-20 left-20 text-blue-400/20 dark:text-green-400/20"
+        animate={{
+          y: [0, -10, 0],
+          rotate: [0, 10, 0],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <FaReact size={40} />
+      </motion.div>
+      
+      <motion.div
+        className="absolute bottom-20 right-20 text-blue-400/20 dark:text-green-400/20"
+        animate={{
+          y: [0, 10, 0],
+          rotate: [0, -10, 0],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      >
+        <FaJava size={40} />
+      </motion.div>
     </section>
   </StyledWrapper>
 );

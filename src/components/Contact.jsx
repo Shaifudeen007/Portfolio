@@ -4,10 +4,17 @@ import styled from 'styled-components';
 const Contact = () => (
   <section
     id="contact"
-    className="h-screen pt-28 px-4 bg-white dark:bg-transparent text-center transition-colors duration-500 flex justify-center items-start"
+    className="h-screen pt-28 px-4 bg-white dark:bg-transparent text-center transition-colors duration-500 flex justify-center items-start relative overflow-hidden"
   >
     <StyledWrapper>
-      <div className="form-card1 max-w-md w-full mx-auto">
+      <motion.div 
+        className="form-card1 max-w-md w-full mx-auto hover-lift relative z-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.02 }}
+      >
         <div className="form-card2">
           {/* ✅ Formspree Activation */}
           <form
@@ -15,9 +22,23 @@ const Contact = () => (
             action="https://formspree.io/f/xayrzddy"
             method="POST"
           >
-            <p className="form-heading">Get In Touch</p>
+            <motion.p 
+              className="form-heading animate-text-shimmer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              Get In Touch
+            </motion.p>
 
-            <div className="form-field">
+            <motion.div 
+              className="form-field"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <input
                 name="name"
                 required
@@ -25,9 +46,15 @@ const Contact = () => (
                 className="input-field"
                 type="text"
               />
-            </div>
+            </motion.div>
 
-            <div className="form-field">
+            <motion.div 
+              className="form-field"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               <input
                 name="email"
                 required
@@ -35,9 +62,15 @@ const Contact = () => (
                 className="input-field"
                 type="email"
               />
-            </div>
+            </motion.div>
 
-            <div className="form-field">
+            <motion.div 
+              className="form-field"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               <input
                 name="subject"
                 required
@@ -45,9 +78,15 @@ const Contact = () => (
                 className="input-field"
                 type="text"
               />
-            </div>
+            </motion.div>
 
-            <div className="form-field">
+            <motion.div 
+              className="form-field"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
               <textarea
                 name="message"
                 required
@@ -56,14 +95,37 @@ const Contact = () => (
                 rows={3}
                 className="input-field"
               />
-            </div>
+            </motion.div>
 
-            <button type="submit" className="sendMessage-btn">
+            <motion.button 
+              type="submit" 
+              className="sendMessage-btn"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               Send Message
-            </button>
+            </motion.button>
           </form>
         </div>
-      </div>
+      </motion.div>
+
+      {/* Floating Contact Elements */}
+      <motion.div
+        className="absolute top-32 right-20 w-8 h-8 border-2 border-blue-400/30 dark:border-green-400/30 rounded-lg"
+        animate={{
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
     </StyledWrapper>
   </section>
 );
