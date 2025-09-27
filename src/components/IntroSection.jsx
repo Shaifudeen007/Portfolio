@@ -7,7 +7,7 @@ import TrueFocus from './TrueFocus';
 const IntroSection = () => (
   <section
     id="home"
-    className="h-screen px-6 md:px-20 flex flex-col justify-center items-center text-black dark:text-white transition-colors duration-500"
+    className="h-screen px-6 md:px-20 flex flex-col justify-center items-center text-black dark:text-white transition-colors duration-500 relative"
   >
     <div className="flex flex-col items-center text-center gap-4">
 
@@ -15,7 +15,7 @@ const IntroSection = () => (
       <img
         src={ProfilePic}
         alt="Mohamed Shaifudeen"
-        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-black dark:border-white shadow-lg object-cover"
+        className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-black dark:border-white shadow-lg object-cover animate-float animate-pulse-glow"
       />
 
       {/* Intro Text */}
