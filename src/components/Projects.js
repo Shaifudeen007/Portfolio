@@ -6,21 +6,21 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen pt-15 flex flex-col justify-center items-center px-4 bg-white text-black dark:bg-transparent dark:text-white transition-colors duration-500 relative overflow-hidden"
+      className="min-h-screen pt-15 flex flex-col justify-center items-center px-4 bg-white text-black dark:bg-transparent dark:text-white transition-colors duration-500"
     >
       {/* Animated heading */}
       <motion.h2
-        className="text-3xl font-bold text-gray-800 dark:text-white mb-8 animate-text-shimmer"
+        className="text-3xl font-bold text-gray-800 dark:text-white mb-8"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
         Projects
       </motion.h2>
 
       {/* Animated cards grid */}
-      <div className="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto justify-items-center relative z-10">
+      <div className="grid gap-5 md:grid-cols-3 max-w-5xl mx-auto justify-items-center">
         {[
           {
             title: "AI Driven Penetration Testing",
@@ -50,31 +50,16 @@ const Projects = () => {
         ].map((project, index) => (
           <motion.div
             key={index}
-            className="card-hover"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.05, y: -10 }}
+            whileHover={{ scale: 1.05 }}
           >
             <Card {...project} />
           </motion.div>
         ))}
       </div>
-
-      {/* Decorative Elements */}
-      <motion.div
-        className="absolute top-16 right-16 w-12 h-12 border-2 border-blue-400/20 dark:border-green-400/20 rounded-full"
-        animate={{
-          rotate: [0, 360],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
     </section>
   );
 };

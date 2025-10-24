@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import AnimatedBackground from "./components/AnimatedBackground";
 import IntroSection from "./components/IntroSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -24,7 +23,6 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <AnimatedBackground />
       <Navbar />
       <main className="flex-grow pt-16 scroll-smooth">
         <IntroSection />
